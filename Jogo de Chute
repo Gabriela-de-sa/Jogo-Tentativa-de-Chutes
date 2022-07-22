@@ -1,0 +1,38 @@
+from random import randint
+
+class SimuladorChute:
+    def __init__(self):
+        self.valor_minimo = 1
+        self.valor_maximo = 20
+    
+    def gerar_numero(self):
+        numero = randint(self.valor_minimo, self.valor_maximo)
+        return numero
+    
+    def jogo(self):
+        numero = self.gerar_numero()
+        cont = 0
+
+        while True:
+            valor = int(input('digite um numero entre 1 e 20: '))
+
+            if valor < 1 or valor > 20:
+                print('Voce digitou um numero errado...')
+                continue
+
+            if valor == numero:
+                print(f'Parabens, voce acertou em {cont} vez(es)')
+                break
+            if valor != numero:
+                if valor < numero:
+                    print('humm resposta errada. O numero que procura é maior!!')
+                    cont += 1
+                    continue
+                else:
+                    print('humm resposta errada. O numero que procura é menor!!')
+                    cont += 1 
+                    continue
+
+
+simulador = SimuladorChute()
+simulador.jogo()
