@@ -21,17 +21,15 @@ class SimuladorChute:
                 continue
 
             if valor == numero:
-                print(f'Parabens, voce acertou em {cont} vez(es)')
+                print(f'Parabens, voce acertou!! Voce chutou {cont} vez(es)')
                 break
             if valor != numero:
                 if valor < numero:
                     print('humm resposta errada. O numero que procura é maior!!')
                     cont += 1
-                    continue
                 else:
                     print('humm resposta errada. O numero que procura é menor!!')
                     cont += 1 
-                    continue
 
 
 simulador = SimuladorChute()
